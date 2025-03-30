@@ -1,0 +1,33 @@
+server:
+  port: 8090
+  servlet:
+    context-path: /${spring.application.name}
+
+spring:
+  application:
+    name: user-microservice
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/user-microservice
+    username: diego
+    password: diego18
+
+  jpa:
+    show-sql: false
+    generate-ddl: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: none
+
+configuration:
+  flyway:
+    options: ?createDatabaseIfNotExist=true
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html

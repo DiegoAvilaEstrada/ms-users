@@ -1,0 +1,14 @@
+openapi: 3.0.3
+
+info:
+  title: Base Service V1 API
+  description: "The **Base Service V1 API** manage base endpoints"
+  version: 1.0.0
+
+tags:
+  - name: Internal Operations for Base Microservice
+    description: "Internal operations about base"
+
+paths: {}
+  
+          
