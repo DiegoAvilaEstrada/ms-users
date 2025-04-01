@@ -1,0 +1,10 @@
+openapi: 3.0.3
+
+info:
+  title: base-responses
+  version: v1
+
+paths: {}
+
+components:
+  responses: {}

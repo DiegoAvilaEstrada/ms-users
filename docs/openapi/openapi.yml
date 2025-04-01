@@ -1,0 +1,28 @@
+openapi: 3.0.3
+
+info:
+  title: Base V1 API
+  description: "The **Base V1 API** manage base endpoints"
+  version: 1.0.0
+
+servers:
+  - url: http://localhost:3598
+    description: Servidor local
+
+paths:
+  /test/hello:
+    get:
+      summary: "Endpoint de prueba Hello"
+      description: "Retorna un mensaje de bienvenida"
+      operationId: getHello
+      responses:
+        "200":
+          description: "Respuesta exitosa con mensaje de bienvenida"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "¡Hola, mundo!"
