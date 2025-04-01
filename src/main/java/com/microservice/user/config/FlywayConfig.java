@@ -1,6 +1,6 @@
-package com.cuvex.base.config;
+package com.microservice.user.config;
 
-import com.cuvex.base.config.properties.DataSourceProperties;
+import com.microservice.user.config.properties.DataSourceProperties;
 import org.flywaydb.core.Flyway;
 import org.springframework.boot.autoconfigure.flyway.FlywayMigrationStrategy;
 import org.springframework.context.annotation.Bean;

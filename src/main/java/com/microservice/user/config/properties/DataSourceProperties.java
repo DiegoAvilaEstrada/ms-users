@@ -1,4 +1,4 @@
-package com.cuvex.base.config.properties;
+package com.microservice.user.config.properties;
 
 import lombok.Getter;
 import lombok.Setter;
