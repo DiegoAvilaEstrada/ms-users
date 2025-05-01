@@ -13,7 +13,7 @@ public class NewUserDto {
     @JsonProperty("full_name")
     private String fullName;
 
-    @JsonProperty("user:name")
+    @JsonProperty("user_name")
     private String userName;
 
     private String password;

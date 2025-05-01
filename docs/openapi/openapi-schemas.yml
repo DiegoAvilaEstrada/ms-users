@@ -7,5 +7,42 @@ info:
 paths: {}
 
 components:
-  schemas: {}
-    
+  schemas:
+
+    http_response_common_dto:
+      type: object
+      description: "Http response that the controllers will use."
+      properties:
+        status_code:
+          type: String
+          description: "Http status code response"
+          example: "200"
+        message:
+          type: String
+          description: "Informative message about http response."
+          example: "The user was created successfully."
+
+    new_user_request_dto:
+      type: object
+      description: "Object DTO for create new user"
+      properties:
+        full_name:
+          type: String
+          description: "user full name"
+          example: "Diego Estrada"
+        user_name:
+          type: String
+          description: "Username for init session"
+          example: "DiegoUser"
+        password:
+          type: String
+          description: "password for init session"
+          example: "admin1234"
+        email:
+          type: String
+          description: "user email for send verification code, tokens..."
+          example: "diego@gmail.com"
+        phone:
+          type: String
+          description: "user phone for send messages from telegram."
+          example: "54114488"

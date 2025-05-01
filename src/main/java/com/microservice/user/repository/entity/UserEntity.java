@@ -31,8 +31,9 @@ public class UserEntity {
 
     private Boolean approved;
 
-    @Column(name = "role_id")
+
     @ManyToOne
+    @JoinColumn(name = "role_id", referencedColumnName = "id")
     private RoleEntity role;
 
     @Column(name = "ts_insert")

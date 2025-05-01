@@ -7,4 +7,9 @@ info:
 paths: {}
 
 components:
-  responses: {}
+  responses:
+    http_common_response:
+      content:
+        application/json:
+          schema:
+            $ref: "openapi-schemas.yml#/components/schemas/http_response_common_dto"

@@ -1,28 +1,26 @@
 openapi: 3.0.3
 
 info:
-  title: Base V1 API
+  title: user-api
   description: "The **Base V1 API** manage base endpoints"
   version: 1.0.0
 
-servers:
-  - url: http://localhost:3598
-    description: Servidor local
+#servers:
+#  - url: http://localhost:3598
+#    description: Servidor local
 
 paths:
-  /test/hello:
-    get:
-      summary: "Endpoint de prueba Hello"
-      description: "Retorna un mensaje de bienvenida"
-      operationId: getHello
+  /user:
+    post:
+      summary: "Endpoint for create new user"
+      description: "endpoint to create the approval request for a new account."
+      operationId: createUser
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "openapi-schemas.yml#/components/schemas/new_user_request_dto"
       responses:
-        "200":
-          description: "Respuesta exitosa con mensaje de bienvenida"
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  message:
-                    type: string
-                    example: "¡Hola, mundo!"
+        "201":
+          $ref: "openapi-responses.yml#/components/responses/http_common_response"
