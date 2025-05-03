@@ -3,6 +3,7 @@ package com.microservice.user.repository.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Getter
@@ -37,6 +38,6 @@ public class UserEntity {
     private RoleEntity role;
 
     @Column(name = "ts_insert")
-    private Date tsInsert;
+    private LocalDateTime tsInsert;
 
 }

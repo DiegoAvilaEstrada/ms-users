@@ -14,4 +14,6 @@ public interface UserCrud extends JpaRepository<UserEntity, Integer> {
     Optional<UserEntity> getByUsername(String username);
 
 
+
+
 }

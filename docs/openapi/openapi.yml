@@ -15,6 +15,9 @@ paths:
       summary: "Endpoint for create new user"
       description: "endpoint to create the approval request for a new account."
       operationId: createUser
+      parameters:
+        #Request header
+        - $ref: "openapi-headers.yml#/components/parameters/x_authorization_header"
       requestBody:
         required: true
         content:

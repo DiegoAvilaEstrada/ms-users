@@ -14,11 +14,11 @@ components:
       description: "Http response that the controllers will use."
       properties:
         status_code:
-          type: String
+          type: string
           description: "Http status code response"
           example: "200"
         message:
-          type: String
+          type: string
           description: "Informative message about http response."
           example: "The user was created successfully."
 
@@ -27,22 +27,22 @@ components:
       description: "Object DTO for create new user"
       properties:
         full_name:
-          type: String
+          type: string
           description: "user full name"
           example: "Diego Estrada"
         user_name:
-          type: String
+          type: string
           description: "Username for init session"
           example: "DiegoUser"
         password:
-          type: String
+          type: string
           description: "password for init session"
           example: "admin1234"
         email:
-          type: String
+          type: string
           description: "user email for send verification code, tokens..."
           example: "diego@gmail.com"
         phone:
-          type: String
+          type: string
           description: "user phone for send messages from telegram."
           example: "54114488"

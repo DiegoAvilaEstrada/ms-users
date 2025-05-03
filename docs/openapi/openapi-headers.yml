@@ -1,0 +1,21 @@
+openapi: 3.0.3
+
+info:
+  title: user-api
+  description: "The **Base V1 API** manage base endpoints"
+  version: 1.0.0
+
+  servers: []
+
+  paths: {}
+
+components:
+  parameters:
+    x_authorization_header:
+      name: x-authorization
+      x-field-name: "token"
+      description: "Authorization token"
+      in: header
+      required: true
+      schema:
+        type: string

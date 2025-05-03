@@ -22,6 +22,10 @@ spring:
     hibernate:
       ddl-auto: none
 
+token:
+  authorization:
+    token: ${TOKEN_AUTHORIZATION}
+
 configuration:
   flyway:
     options: ?createDatabaseIfNotExist=true

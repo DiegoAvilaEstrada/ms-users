@@ -1,9 +1,10 @@
 package com.microservice.user.service;
 
 import com.microservice.user.RoleEnum;
-import com.microservice.user.dto.input.NewUserDto;
 import com.microservice.user.exception.HttpException;
 import com.microservice.user.mapper.UserEntityMapper;
+import com.microservice.user.model.HttpResponseCommonDto;
+import com.microservice.user.model.NewUserRequestDto;
 import com.microservice.user.repository.crud.UserCrud;
 import com.microservice.user.repository.entity.RoleEntity;
 import com.microservice.user.repository.entity.UserEntity;
@@ -22,18 +23,18 @@ public class UserService {
 
     private final UserEntityMapper userEntityMapper;
 
-    public void saveNormalUser(NewUserDto newUserDto){
+    public HttpResponseCommonDto saveNormalUser(NewUserRequestDto newUserDto){
         try{
             RoleEntity roleEntity = roleService.getRoleById(RoleEnum.USER.getRoleCode());
             UserEntity user = userEntityMapper.toUserEntity(newUserDto, roleEntity);
             userCrud.save(user);
+            HttpResponseCommonDto httpResponseCommonDto = new HttpResponseCommonDto();
+            httpResponseCommonDto.message("The user was saved successfully");
+            httpResponseCommonDto.statusCode(String.valueOf(HttpStatus.CREATED));
+            return httpResponseCommonDto;
         }catch(Exception exception){
             throw new HttpException("Error trying save user.", HttpStatus.BAD_REQUEST);
         }
     }
-
-    
-
-
 
 }
