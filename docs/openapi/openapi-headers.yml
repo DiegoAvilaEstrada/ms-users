@@ -11,6 +11,23 @@ info:
 
 components:
   parameters:
+    x_user:
+      name: user
+      x-field-name: "username"
+      description: "username of the user"
+      in: header
+      required: true
+      schema:
+        type: string
+    x_password:
+      name: password
+      x-field-name: "password"
+      description: "user password"
+      in: header
+      required: true
+      schema:
+        type: string
+
     x_authorization_header:
       name: x-authorization
       x-field-name: "token"

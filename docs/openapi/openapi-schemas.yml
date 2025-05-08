@@ -8,6 +8,22 @@ paths: {}
 
 components:
   schemas:
+    user_response:
+      type: object
+      description: "User response when the request is by username"
+      properties:
+        name:
+          type: string
+          description: "user full name"
+          example: "Juan Lopez"
+        username:
+          type: string
+          description: "username of the user"
+          example: "juanlopez"
+        email:
+          type: string
+          description: "User email"
+          example: "exampleemail@gmail.com"
 
     http_response_common_dto:
       type: object

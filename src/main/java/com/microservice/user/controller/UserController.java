@@ -4,6 +4,7 @@ import com.microservice.user.api.UserApi;
 import com.microservice.user.exception.HttpException;
 import com.microservice.user.model.HttpResponseCommonDto;
 import com.microservice.user.model.NewUserRequestDto;
+import com.microservice.user.model.UserResponse;
 import com.microservice.user.service.UserService;
 import com.microservice.user.utils.TokenValidation;
 import lombok.RequiredArgsConstructor;
@@ -27,5 +28,10 @@ public class UserController implements UserApi {
         }
 
         return new ResponseEntity<>(userService.saveNormalUser(newUserRequestDto), HttpStatus.CREATED);
+    }
+
+    @Override
+    public ResponseEntity<UserResponse> getUser(String xAuthorization, String user, String password) {
+        return new ResponseEntity<>(userService.getUserByUsernamePassword(user,password), HttpStatus.OK);
     }
 }

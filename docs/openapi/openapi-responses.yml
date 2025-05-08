@@ -8,6 +8,11 @@ paths: {}
 
 components:
   responses:
+    user_response:
+      content:
+        application/json:
+          schema:
+            $ref: "openapi-schemas.yml#/components/schemas/user_response"
     http_common_response:
       content:
         application/json:

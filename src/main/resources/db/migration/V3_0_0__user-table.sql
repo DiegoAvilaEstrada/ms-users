@@ -2,7 +2,7 @@ CREATE TABLE IF NOT EXISTS `user`(
     id INT AUTO_INCREMENT,
     full_name VARCHAR(100) NOT NULL,
     username VARCHAR(20) NOT NULL UNIQUE,
-    password VARCHAR(20) NOT NULL,
+    password VARCHAR(100) NOT NULL,
     email VARCHAR(75) NOT NULL,
     phone VARCHAR(20) NOT NULL,
     role_id INTEGER NOT NULL,
